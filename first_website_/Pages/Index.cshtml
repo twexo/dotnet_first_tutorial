@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@using first_website_.Components
+
+    <div class="text-center">
+        <h1 class="display-4">First Website in dotnet</h1>  
+        
+    </div>
+
+@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
+
+
+  <script src="_framework/blazor.server.js"></script>
